@@ -1,0 +1,310 @@
+/* ----- Button -----*/
+.closeRightFollow
+{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.btnVidi
+{
+    padding: 2px 30px;
+    border: 0;
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: rgba(15, 15, 15, 0.03);
+    border: 1px solid #417cef;
+    transition: background-color 0.3s ease-out;
+    cursor: pointer;
+    width: 50%;
+    height: 27px;
+}
+
+.igbtn
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnBack
+{
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    height: 3em;
+    font-size: small;
+
+    background-image: url('../Icon/back.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 30px;
+    width: 50px;
+}
+
+.btnBackHidden
+{
+    visibility: hidden;
+}
+
+.btnSettings
+{
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    height: 3em;
+    font-size: small;
+
+    background-image: url('../Icon/settings.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 30px;
+    width: 50px;
+}
+
+.btnLogout
+{
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    height: 3em;
+    font-size: small;
+
+    background-image: url('../Icon/logout.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 30px;
+    width: 50px;
+}
+
+.btnSearch
+{
+    border: none;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    height: 3em;
+    font-size: small;
+
+    background-image: url('../Icon/search.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 39px;
+    width: 59px;
+}
+
+.search
+{
+    margin-right: unset;
+}
+
+.btnAdd
+{
+    border: none;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    height: 3em;
+    font-size: small;
+
+    background-image: url('../Icon/add.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 39px;
+    width: 59px;
+}
+
+/* .btnAdd:hover,
+.btnAdd:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+  border-radius: 300px;
+} */
+
+.btnAdd:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.btnDelete
+{
+    border: none;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    height: 3em;
+    font-size: small;
+
+    background-image: url('../Icon/delete.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 39px;
+    width: 59px;
+}
+
+.btnInformation
+{
+    border: none;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    height: 3em;
+    font-size: small;
+
+    background-image: url('../Icon/information.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    height: 39px;
+    width: 59px;
+}
+
+/*<!-- HTML !-->
+<button class="button-18" role="button">Button 18</button>*/
+
+/* CSS */
+.button-18 {
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus { 
+  background-color: #16437E;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, .7);
+}
+
+.button-18:disabled { 
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, .08);
+  color: rgba(0, 0, 0, .3);
+}
+
+/* <!-- HTML !-->
+<button class="button-7" role="button">Button 7</button> */
+
+/* CSS */
+.button-7 {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-7:hover,
+.button-7:focus {
+  background-color: #07c;
+}
+
+.button-7:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-7:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+/* <!-- HTML !-->
+<button class="button-8" role="button">Button 8</button> */
+
+/* CSS */
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+/* Button */

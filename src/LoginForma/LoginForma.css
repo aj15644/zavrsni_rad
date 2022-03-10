@@ -1,0 +1,397 @@
+html, body, #root
+{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.pozadina
+{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-image: url('../Icon/wave.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+footer
+{
+    width: 100%;
+    height: 50px;
+}
+
+.root-container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-controller
+{
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 24em;
+    min-width: 21em;
+    height: 35px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    align-items: center;
+    transition: visibility 0.5s ease-out;
+}
+
+.controller
+{
+    flex: 1;
+    text-align: center;
+    height: 100%;
+    line-height: 2;
+    cursor: pointer;
+}
+
+.selected-controller
+{
+    border-bottom: 2px solid #70a1ff;
+}
+
+.box-container
+{
+    display: flex;
+    flex-direction: column;
+    max-width: 24em;
+    min-width: 21em;
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);
+    border-radius: 6px;
+    padding: 24px;
+    background-color: white;
+}
+
+.inner-container
+{
+    transition: visibility 0.2s ease-out;
+}
+
+.inner-container.show
+{
+    visibility: visible;
+}
+
+.header
+{
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 17px;
+    font-family: Oxygen, sans-serif;
+    font-size: 22px;
+    border-bottom: 2px solid #70a1ff;
+}
+
+.box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name-surname
+{
+    display: flex;
+}
+
+.input-group
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn
+{
+    align-items: center;
+}
+
+.input-group-radio
+{
+    display: flex;
+}
+
+.radio-input
+{
+    border-radius: 3px;
+    border: 1px solid #CDD9ED;
+    padding: 5px;
+}
+
+.login-label
+{
+    font-family: Oxygen, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+.login-input
+{
+    height: 1.2em;
+    border-radius: 3px;
+    border: 1px solid #CDD9ED;
+    padding: 13px;
+    font-family: Oxygen, sans-serif;
+    font-size: 19px;
+    color: #3e3e42;
+    background-color: rgba(15, 15, 15, 0.01);
+}
+
+.login-input-password
+{
+    margin-right: 18px;
+    height: 1.2em;
+    border-radius: 3px;
+    border: 0px solid #70a1ff;
+    transition: border 0.4s ease-out;
+    padding: 13px;
+    font-family: Oxygen, sans-serif;
+    font-size: 19px;
+    color: #3e3e42;
+    background-color: rgba(15, 15, 15, 0.01);
+}
+
+.login-input-ns
+{
+    width: 154px;
+    height: 1.2em;
+    border-radius: 3px;
+    border: 1px solid #CDD9ED;
+    padding: 13px;
+    font-family: Oxygen, sans-serif;
+    font-size: 19px;
+    color: #3e3e42;
+    background-color: rgba(15, 15, 15, 0.01);
+    margin-right: 20px;
+}
+
+.login-input:focus
+{
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);;
+    outline: none;
+    border-color: rgb(1, 139, 255);
+}
+
+.login-input-password:focus
+{
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);;
+    outline: none;
+}
+
+.login-input-ns:focus
+{
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);;
+    outline: none;
+    border-color: rgb(1, 139, 255);
+}
+
+.login-input::placeholder
+{
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    color: rgba(15, 15, 15, 0.4);
+}
+
+.login-input-password::placeholder
+{
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    color: rgba(15, 15, 15, 0.4);
+}
+
+.login-input-ns::placeholder
+{
+    font-family: Oxygen, sans-serif;
+    font-size: 16px;
+    color: rgba(15, 15, 15, 0.4);
+}
+
+small 
+{
+    color: red;
+}
+
+.password
+{
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #CDD9ED;
+    font-size: 19px;
+}
+
+.password:focus
+{
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 0.2);;
+    outline: none;
+    border-color: rgb(1, 139, 255);
+}
+
+.pomeri
+{
+    padding-top: 15px;
+}
+
+/* ----- switch password ----- */
+/* The switch - the box around the slider */
+.switch 
+{
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+ }
+  
+/* Hide default HTML checkbox */
+.switch input 
+{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider 
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before 
+{
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider 
+{
+    background-color: #2196F3;
+}
+
+input:focus + .slider 
+{
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before 
+{
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round 
+{
+    border-radius: 17px;
+}
+
+.slider.round:before 
+{
+    border-radius: 50%;
+}
+/* switch password */
+
+.divLoading
+{
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.divLoadingClose
+{
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    height: 0%;
+}
+
+/* <!-- HTML !-->
+<button class="button-4" role="button">Button 4</button> */
+
+/* CSS */
+.button-4 {
+  appearance: none;
+  background-color: #FAFBFC;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 36px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-4:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button-4:disabled {
+  background-color: #FAFBFC;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959DA5;
+  cursor: default;
+}
+
+.button-4:active {
+  background-color: #EDEFF2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.button-4:focus {
+  outline: 1px transparent;
+}
+
+.button-4:before {
+  display: none;
+}
+
+.button-4:-webkit-details-marker {
+  display: none;
+}
