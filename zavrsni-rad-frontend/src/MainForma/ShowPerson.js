@@ -92,16 +92,19 @@ class ShowPerson extends React.Component
                     </ul>
                 </div>
                 
-                <div className={(this.props.state.osoba.company ? "main-box-container-small-close" : "main-box-container-small")}>
+                {!this.props.state.osoba.company && <div className="main-box-container-small">
                     <h3 className="h3ShowPerson">Technologies: </h3>
                     <ul className="ulAbout">
                         {this.props.state.osobaTech.map((tech) => <li key={tech.name}> {tech.name} </li>)}
                     </ul>
-                </div>
+                </div>}
 
                 <div className="main-box-container-small">
                     <h3 className="h3ShowPerson">Biography: </h3>
-                    <label>{this.props.state.osobaAbout.map((a) => a.description)}</label>
+                    <div className="labelFlex">
+                        {!this.props.state.osoba.company && <label>Works at: {this.props.state.osobaWorksAt}</label>}
+                        <label>{this.props.state.osobaAbout.map((a) => a.description)}</label>
+                    </div>
                 </div>               
             </div>
         );

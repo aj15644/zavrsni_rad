@@ -115,6 +115,16 @@ namespace zavrsni_rad_backend.Controllers
                                         .Match("(p:Person)<-[r:OPISUJE]-(a:About)")
                                         .Where((User p) => p.name == result.name)
                                         .Return(a => a.As<About>()).ResultsAsync;
+
+                var worksAtList = (List<Company>)await _client.Cypher.WithDatabase("graph.db")
+                                        .Match("(p:Person)-[r:RADI_U]->(c:Person)")
+                                        .Where((User p) => p.name == result.name)
+                                        .Return(c => c.As<Company>()).ResultsAsync;
+
+                if (worksAtList.Count == 0)
+                    result.worksAt = "Unemployed";
+                else
+                    result.worksAt = worksAtList[0].ime;
             }
 
             return Ok(result);

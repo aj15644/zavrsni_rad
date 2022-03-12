@@ -641,7 +641,7 @@ class Settings extends React.Component
 
         return (
             <div className="main-box-container-show-person">
-                <div className={(this.props.state.isCompany ? "main-box-container-small-close" : "main-box-container-small")}>
+                {!this.props.state.isCompany && <div className="main-box-container-small">
                     <h3 className="h3ShowPerson">Technologies/languages: </h3>
                     <ul className="ulTech">
                         {this.state.technologies.map((tech) => <li key={tech}
@@ -657,7 +657,7 @@ class Settings extends React.Component
                     </div>
                     <small className="danger-error"> {newTechErr ? newTechErr : ""} </small>
 
-                    <div className={((this.props.state.username === "admin") ? "groupBox3" : "addNewTechClose")}>
+                    {(this.props.state.username === "admin") && <div className="groupBox3">
                         <h3 className="h3ShowPerson">Add new technology: </h3>
                         <Select className="select" options={this.state.allTechnologies} onChange={this.onSelectNewTech.bind(this)} />
                         <input type="text" name="addtechnology" className="update-input" placeholder="Add new technology"
@@ -667,8 +667,8 @@ class Settings extends React.Component
                             <button type="button" className="btnDelete" onClick={this.deleteTechnology.bind(this)}></button>
                         </div>
                         <small className="danger-error"> {addNewTechErr ? addNewTechErr : ""} </small>
-                    </div>
-                </div>
+                    </div>}
+                </div>}
 
                 <div className="main-box-container-small">
                     <h3 className="h3ShowPerson">E-mails: </h3>
@@ -706,7 +706,7 @@ class Settings extends React.Component
                     <small className="danger-error"> {deletePhoneErr ? deletePhoneErr : ""} </small>
                 </div>
 
-                <div className={(this.props.state.isCompany ? "main-box-container-small-close" : "main-box-container-small")}>
+                {!this.props.state.isCompany && <div className="main-box-container-small">
                     <h3 className="h3ShowPerson">Company: </h3>
                     <Select className="select" options={this.state.allCompanies} onChange={this.onSelectCompany.bind(this)} placeholder={this.state.myCompany} />
                     <label className="labelDateOf">Start date:</label>
@@ -715,7 +715,7 @@ class Settings extends React.Component
                         <button type="button" className="btnAdd" onClick={this.addRadiU.bind(this)}></button>
                     </div>
                     <small className="danger-error"> {addNewTechErr ? addNewTechErr : ""} </small>
-                </div>
+                </div>}
 
                 <div className="main-box-container-small">
                     <h3 className="h3ShowPerson">Biography: </h3>

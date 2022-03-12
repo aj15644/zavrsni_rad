@@ -15,7 +15,7 @@ class MainForma extends React.Component
         this.state = { isSettingsOpen: false, isProfileSettingsOpen: false, errors: [],
                        name: "", surname: "", oldPassword: "", newPassword: "", people: [], peoplePL: [], 
                        search: "", boolClickPerson: false,
-                       osoba: [], osobaTech: [], osobaEmail: [], osobaPhone: [], osobaAbout: [], isPersonInfoOpen: false,
+                       osoba: [], osobaTech: [], osobaEmail: [], osobaPhone: [], osobaAbout: [], osobaWorksAt: "", isPersonInfoOpen: false,
                        showInfoLabSuggested: false, showInfoLabCompany: false, 
                        followPeople: [], followPeoplePL: [], follow2People: [], follow2PeoplePL: [], employee: [], employeePL: [], 
                        isFollowingOpen: true, isSuggestedOpen: false, isSearchOpen: false,
@@ -62,11 +62,16 @@ class MainForma extends React.Component
         if (this.state.isSettingsOpen === false)
             this.setState({ isSettingsOpen: true });
         else
-            this.setState({ isSettingsOpen: false});
+            this.closeSettingsBox();
     }
 
     closeSettingsBox()
     {
+        this.setState({ name: "" });
+        this.setState({ surname: "" });
+        this.setState({ oldPassword: "" });
+        this.setState({ newPassword: "" });
+
         this.setState({ isProfileSettingsOpen: false});
         this.setState({ isSettingsOpen: false });
     }
@@ -610,7 +615,8 @@ class MainForma extends React.Component
                     this.setState({ osobaTech: data.tehnologijeIJezici });
                     this.setState({ osobaEmail: data.mail });
                     this.setState({ osobaPhone: data.telefon });
-                    this.setState({ osobaAbout: data.about })
+                    this.setState({ osobaAbout: data.about });
+                    this.setState({ osobaWorksAt: data.worksAt });
                     this.forceUpdate();
                 },(error) => {
                     alert(error);
@@ -655,7 +661,7 @@ class MainForma extends React.Component
         return (
             <div className="main-inner-container">
                 <div className="left-col">
-                    <div className={(this.state.isSettingsOpen ? "settingsOpen" : "settingsClose")}>
+                    {this.state.isSettingsOpen && <div className="settingsOpen">
                         <div className="tabs">
                             <div className="tab">
                                 <input type="checkbox" id="chck1" className="inputCheckbox" onClick={this.showProfileSettingsBox.bind(this)}/>
@@ -673,7 +679,7 @@ class MainForma extends React.Component
                                 </div>
                             </div>
 
-                            <div className={(this.props.state.isCompany ? "tabClose" : "tab")}>
+                            {!this.props.state.isCompany && <div className="tab">
                                 <input type="checkbox" id="chck3" className="inputCheckbox"/>
                                 <label className="tab-label" htmlFor="chck3"> Change surname </label>
                                 <div className="tab-content">
@@ -682,7 +688,7 @@ class MainForma extends React.Component
                                     <button type="button" className="button-7" onClick={this.submitSurnameChange.bind(this)}> Change </button>
                                     <small className="danger-error"> {surnameErr ? surnameErr : ""} </small>
                                 </div>
-                            </div>
+                            </div>}
 
                             <div className="tab">
                                 <input type="checkbox" id="chck4" className="inputCheckbox"/>
@@ -703,7 +709,7 @@ class MainForma extends React.Component
                                 <label className="tab-label2" htmlFor="chck5"> Close </label>
                             </div>
                         </div>
-                    </div>
+                    </div>}
                 </div>
 
                 <div className="main-col">
@@ -718,7 +724,6 @@ class MainForma extends React.Component
                                 {this.props.state.name} {this.props.state.surname} 
                             </h1>
                             <h1 className="boxHeader2">
-                                {/* {this.state.isPersonInfoOpen && <button type="button" className="btnBack" onClick={this.showPerson.bind(this)}></button>} */}
                                 <button type="button" className="btnSettings" onClick={this.showSettingsBox.bind(this)}></button>
                                 <button type="button" className="btnLogout" onClick={this.logOut.bind(this)}></button>
                             </h1>

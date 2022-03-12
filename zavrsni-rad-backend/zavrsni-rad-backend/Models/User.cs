@@ -25,5 +25,6 @@ namespace zavrsni_rad_backend.Models
         public List<Mail> mail { get; set; }
         public List<Telefon> telefon { get; set; }
         public List<About> about { get; set; }
+        public string worksAt { get; set; }
     }
 }

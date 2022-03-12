@@ -21,13 +21,6 @@ html, body
     float: left;
 }
 
-.reactColumn
-{
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-}
-
 .settingsOpen
 {
     display: flex;
@@ -35,13 +28,6 @@ html, body
     visibility: visible;
     width: 100%;
     background-color: #eeeeee;
-}
-
-.settingsClose
-{
-    visibility: hidden;
-    max-height: 0%;
-    width: 100%;
 }
 
 /* ----- Accordion styles ----- */
@@ -65,14 +51,6 @@ html, body
     width: 100%;
     color: white;
     overflow: hidden;
-}
-
-.tabClose
-{
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-    height: 0%;
 }
 
 .tab-label
@@ -261,14 +239,6 @@ input:checked ~ .tab-content
     width: 90%;
 }
 
-.main-box-container-small-close
-{
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-    height: 0%;
-}
-
 .main-box-c2
 {
     display: flex;
@@ -384,13 +354,6 @@ input:checked ~ .tab-content
     pointer-events: none;
 }
 
-.neo4jColumn
-{
-    height: 100%;
-    width: 100%;
-    pointer-events: none;
-}
-
 .update-input
 {
     margin-right: 10px;
@@ -428,6 +391,12 @@ ul
 .ulAbout
 {
     padding-left: unset;
+}
+
+.labelFlex
+{
+    display:flex;
+    flex-direction:column;
 }
 
 .ulPerson
@@ -540,14 +509,6 @@ textarea
 .labelInfo
 {
     color: #999999;
-}
-
-.addNewTechClose
-{
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-    height: 0%;
 }
 
 .select
